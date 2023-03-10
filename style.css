@@ -1,0 +1,110 @@
+
+body {
+	margin: 0px;
+	font-family: "League Spartan"; sans-serif;  
+}
+
+li, ul{
+	color:hsl(0, 0%, 100%); 
+	display: inline-block;
+	font-weight: bold;
+	padding: 20px;
+}
+
+a {
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: .85rem;
+	color:black;
+} 
+
+h1 {
+	font-weight: 700;
+	font-size: 3rem;
+}
+
+h3 {
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 1rem;
+	letter-spacing: .5rem;
+}
+
+p {
+	color: hsl(0, 0%, 63%);
+	line-height: 1.5rem;
+}
+
+figure {
+	margin: 0;
+}
+
+#container {
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: 70vh auto;
+
+}
+
+.item1 {
+	background-image: url(images/desktop-image-hero-1.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	grid-column-start: span 5;
+}
+
+.item1 >:first-child{
+	margin-top: 4rem;
+	margin-left: 3rem;
+}
+
+.item2 {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	grid-column-start: span 3;
+}
+
+.item2 >:first-child {
+	width: 60%;
+	margin-top: 3rem;
+}
+
+#arrows {
+	display: flex;
+	width: 10%;
+	background-color: hsl(0, 0%, 0%);
+	align-self: flex-start; 
+	margin-top:;
+	padding: 1.5rem;
+}
+
+#arrows >:last-child{
+	margin-left: auto;
+}
+
+.item3 {
+	grid-column-start: span 2;
+}
+
+.item4 {
+	grid-column-start: span 4;
+	padding: 3rem 3rem;
+}
+
+.item5 {
+	grid-column-start: span 2;
+}
+
+figure img {
+	width: 100%;
+	height: 100%;
+}
+
+.slide1, .slide2 {
+	display: none;
+}
+
+	
