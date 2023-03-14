@@ -1,13 +1,12 @@
-html{
-	width: 100%;
-	height:100%;
-}
 
 body {
-	width: 100%;
-	height:100%;
 	margin: 0px;
 	font-family: "League Spartan"; sans-serif; 
+}
+
+ul {
+	position:relative;
+	bottom: 4px;
 }
 
 li, ul{
@@ -17,9 +16,15 @@ li, ul{
 	padding: 20px;
 }
 
-ul{
-	position:relative;
-	bottom: 4px;
+li > a {
+	text-transform: initial;
+	text-decoration: none;
+	color: white;
+	letter-spacing: initial;
+}
+
+img {
+	display: block;
 }
 
 a {
@@ -27,24 +32,24 @@ a {
 	text-decoration: none;
 	letter-spacing: .85rem;
 	color:black;
-} 
+}
 
 h1 {
 	font-weight: 700;
-	font-size: 2.5rem;
-	line-height: 2.5rem;
-}
+	font-size: 2rem;
+	line-height: 2rem;
+} 
 
 h3 {
 	text-transform: uppercase;
-	font-weight: 600;
-	font-size: 1rem;
-	letter-spacing: .5rem;
+	font-weight: 700;
+	font-size: .8rem;
+	letter-spacing: .3rem;
 }
 
 p {
 	color: hsl(0, 0%, 63%);
-	line-height: 1.5rem;
+	line-height: 1.3rem;
 	font-size: 1rem;
 }
 
@@ -52,73 +57,158 @@ figure {
 	margin: 0;
 }
 
+figure img {
+	width: 100%;
+	height: 100%;
+}
+
+button{
+	background-color: black;
+	border: none;
+	float: left;
+	padding: 1rem 1.5rem;
+}
+
+button:hover {
+	background-color: hsl(0, 0%, 27%);
+}
+
+.inline{
+	display: inline-block;
+}
+
+#nav {
+	display: none;
+}
+
+#header{
+	width: 100%;
+	margin-top: 1.5rem;
+	text-align: center;
+}
+
+#icon {
+	float: left;
+	padding-left: 1rem;
+}
+
+#shoplink {
+	margin: 3rem 0 4rem 0;
+}
+
+#arrows1 {
+	align-self: flex-end; 
+}
+
+#arrows2 {
+	display: none;
+}
+
 #container {
 	display: grid;
-	grid-template-columns: repeat(10, 1fr);
-	grid-template-rows: 70vh 30vh;
-
+	grid-template-columns: 100%;
+	grid-template-rows:50vh;
 }
 
 .item1 {
 	background-image: url(images/desktop-image-hero-1.jpg);
 	background-size: cover;
 	background-position: center center;
-	grid-column-start: span 6;
-}
-
-.item1 >:first-child{
-	margin-left: 3rem;
-}
-
-.item2 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	grid-column-start: span 4;
 }
 
 .item2 >:first-child {
-	width: 70%;
-	margin-top: 4rem;
-}
+	padding: 2rem 1.5rem;
+	}
 
-.shoplink {
-	margin-top: 1rem;
-}
-
-#arrows {
-	display: flex;
-	width: 16.7%;
-	background-color: hsl(0, 0%, 0%);
-	align-self: flex-start; 
-	padding: 1.5rem;
-}
-
-#arrows >:last-child{
-	margin-left: auto;
-}
-
-.item3 {
-	grid-column-start: span 3;
-}
 
 .item4 {
-	grid-column-start: span 4;
-	padding: 3rem 2rem;
-}
-
-.item5 {
-	grid-column-start: span 3;
-}
-
-figure img {
-	width: 100%;
-	height: 100%;
+	padding: 2rem 1.5rem;
 }
 
 .slide1, .slide2 {
 	display: none;
 }
 
-	
+@media screen and (min-width: 500px) {
+	h1 {
+	font-weight: 700;
+	font-size: 2.5rem;
+	line-height: 2.5rem;
+	}
+
+	h3 {
+	font-size: 1rem;
+	letter-spacing: .4rem;
+	}
+
+	button{
+	padding: 1.5rem 1.82rem;
+	}
+
+	#icon {
+		display: none;
+	}
+
+	#header{
+		display: inline-block;
+		margin: 3rem 0 0 3rem;
+		text-align: initial;
+	}
+
+
+	#nav {
+		display: initial;
+	}
+	#shoplink {
+	margin-top: 2rem;
+	}
+
+	#arrows1 {
+		display: none; 
+	}
+
+	#arrows2 {
+		display: initial;
+		align-self: flex-start;
+	}
+
+	#container {
+		grid-template-columns: repeat(10, 1fr);
+		grid-template-rows: 65vh 35vh;
+	}
+
+	.item1 {
+		display: initial;
+		grid-column-start: span 6;
+	}
+
+	.item2 {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		grid-column-start: span 4;
+	}
+
+	.item2 >:first-child {
+		width: 70%;
+		margin-top: 4rem;
+	}
+
+	.item3 {
+		grid-column-start: span 3;
+	}
+
+	.item4 {
+		grid-column-start: span 4;
+		padding: 3rem 2.2rem;
+	}
+
+	.item5 {
+		grid-column-start: span 3;
+	}
+}
