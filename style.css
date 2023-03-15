@@ -92,6 +92,10 @@ button:hover {
 	padding-left: 1rem;
 }
 
+#logo {
+	margin-left: -36px;
+}
+
 #shoplink {
 	margin: 3rem 0 4rem 0;
 }
