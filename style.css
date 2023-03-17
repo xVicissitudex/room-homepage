@@ -5,15 +5,16 @@ body {
 }
 
 ul {
+	display: inline-block;
 	position:relative;
 	bottom: 4px;
 }
 
-li, ul{
-	color:hsl(0, 0%, 100%); 
+li {
 	display: inline-block;
+	color:hsl(0, 0%, 100%); 
 	font-weight: bold;
-	padding: 20px;
+	padding: clamp(10px,1vw,20px);
 }
 
 li > a {
@@ -65,8 +66,9 @@ figure img {
 button{
 	background-color: black;
 	border: none;
+	box-sizing: content-box;
 	float: left;
-	padding: 1rem 1.5rem;
+	padding: min(20px, 5vw) min(24px, 6vw);
 }
 
 button:hover {
@@ -77,14 +79,28 @@ button:hover {
 	display: inline-block;
 }
 
-#nav {
+.invisible {
 	display: none;
 }
 
-#header{
+.header{
 	width: 100%;
 	margin-top: 1.5rem;
 	text-align: center;
+}
+
+.header-transform {
+	height: 30%;
+	background-color: white;
+	margin-top: 0px;
+}
+
+.nav {
+	display: none;
+}
+
+.nav-bar-pop-up {
+	color:black;
 }
 
 #icon {
@@ -137,11 +153,11 @@ button:hover {
 	display: none;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 800px) {
 	h1 {
 	font-weight: 700;
-	font-size: 2.5rem;
-	line-height: 2.5rem;
+	font-size: clamp(1.5rem, 3vw,2.5rem);
+	line-height: min(3vw, 2.5rem);
 	}
 
 	h3 {
@@ -149,26 +165,31 @@ button:hover {
 	letter-spacing: .4rem;
 	}
 
+	a {
+		letter-spacing: max(.8vw, .65rem);
+	}
+
 	button{
-	padding: 1.5rem 1.82rem;
+	padding: min(25px,15%) min(30px,17%);
 	}
 
 	#icon {
 		display: none;
 	}
 
-	#header{
+	.header{
 		display: inline-block;
-		margin: 3rem 0 0 3rem;
+		margin: 3rem 0 0 3vw;
 		text-align: initial;
 	}
 
-
-	#nav {
+	.nav {
 		display: initial;
 	}
+
 	#shoplink {
-	margin-top: 2rem;
+
+	margin: 2rem 0;
 	}
 
 	#arrows1 {
@@ -178,6 +199,7 @@ button:hover {
 	#arrows2 {
 		display: initial;
 		align-self: flex-start;
+		width: 30%;
 	}
 
 	#container {
@@ -200,7 +222,7 @@ button:hover {
 
 	.item2 >:first-child {
 		width: 70%;
-		margin-top: 4rem;
+		margin-top: 2vw;
 	}
 
 	.item3 {
@@ -209,7 +231,7 @@ button:hover {
 
 	.item4 {
 		grid-column-start: span 4;
-		padding: 3rem 2.2rem;
+		padding: 2vw;
 	}
 
 	.item5 {
