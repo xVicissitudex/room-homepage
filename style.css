@@ -89,10 +89,18 @@ button:hover {
 	text-align: center;
 }
 
+.icon {
+	float: left;
+	padding-left: 1rem;
+}
+
 .header-transform {
 	height: 30%;
 	background-color: white;
 	margin-top: 0px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .nav {
@@ -100,15 +108,15 @@ button:hover {
 }
 
 .nav-bar-pop-up {
+	padding-right: 1rem;
+	position: static;
+}
+
+.linkstyle {
 	color:black;
 }
 
-#icon {
-	float: left;
-	padding-left: 1rem;
-}
-
-#logo {
+.logo {
 	margin-left: -36px;
 }
 
@@ -173,8 +181,12 @@ button:hover {
 	padding: min(25px,15%) min(30px,17%);
 	}
 
-	#icon {
+	.icon {
 		display: none;
+	}
+
+	.logo {
+		margin-left: 0px;
 	}
 
 	.header{

@@ -8,12 +8,12 @@ function navBarPopup () {
 	let header = document.querySelector(".header")
 	header.classList.toggle("header-transform")
 
-	let navBar = document.getElementsByTagName("ul");
-	console.log(navBar.classList);
-	navBar.classList.toggle("inline");
-	let navLinks = document.getElementsByTagName("li");
+	let navBar = document.getElementsByTagName("ul")[0];
+	navBar.classList.toggle("nav");
+	navBar.classList.toggle("nav-bar-pop-up");
+	let navLinks = document.getElementsByTagName("a");
 	for (let link of navLinks) {
-		link.classList.toggle("nav-bar-pop-up")
+		link.classList.toggle("linkstyle")
 	}
 
 	function toggleImage () {
@@ -21,7 +21,6 @@ function navBarPopup () {
 		if (img.indexOf("images/icon-hamburger.svg") == -1) {
 			document.querySelector("#icon").src = "images/icon-hamburger.svg"
 		}
-
 		else {
 			document.querySelector("#icon").src = "images/icon-close.svg"
 		}
