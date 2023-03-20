@@ -17,6 +17,13 @@ li {
 	padding: clamp(10px,1vw,20px);
 }
 
+a {
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: .85rem;
+	color:black;
+}
+
 li > a {
 	text-transform: initial;
 	text-decoration: none;
@@ -28,12 +35,6 @@ img {
 	display: block;
 }
 
-a {
-	text-transform: uppercase;
-	text-decoration: none;
-	letter-spacing: .85rem;
-	color:black;
-}
 
 h1 {
 	font-weight: 700;
@@ -157,20 +158,31 @@ button:hover {
 	padding: 2rem 1.5rem;
 }
 
-.slide1, .slide2 {
-	display: none;
-}
-
 @media screen and (min-width: 800px) {
+
+	li > a {
+		display: block;
+	}
+
+	li > a::before {
+		content: "";
+		display: ;
+		position:absolute;
+		left: 0;
+        bottom: 0;
+        width: 100%;
+        border-bottom: 2px solid white;
+    }
+
 	h1 {
-	font-weight: 700;
-	font-size: clamp(1.5rem, 3vw,2.5rem);
-	line-height: min(3vw, 2.5rem);
+		font-weight: 700;
+		font-size: clamp(1.5rem, 3vw,2.5rem);
+		line-height: min(3vw, 2.5rem);
 	}
 
 	h3 {
-	font-size: 1rem;
-	letter-spacing: .4rem;
+		font-size: 1rem;
+		letter-spacing: .4rem;
 	}
 
 	a {
@@ -178,7 +190,7 @@ button:hover {
 	}
 
 	button{
-	padding: min(25px,15%) min(30px,17%);
+		padding: min(25px,15%) min(30px,17%);
 	}
 
 	.icon {
@@ -201,7 +213,7 @@ button:hover {
 
 	#shoplink {
 
-	margin: 2rem 0;
+		margin: 2rem 0;
 	}
 
 	#arrows1 {
