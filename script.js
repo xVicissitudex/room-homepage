@@ -28,6 +28,15 @@ function navBarPopup () {
 }
 
 function removeNavBar (event) {
+	let background = document.querySelector(".item1");
+	if(event.target.outerWidth < 400) {
+		background.style.backgroundImage = storage[tracker][0];
+		console.log(background.style.backgroundImage);
+	}
+	if (event.target.outerWidth >= 400) {
+		background.style.backgroundImage = storage[tracker][1];
+	}
+
 	if(event.target.outerWidth >= 800) {
 		let img = document.querySelector("#icon").src;
 		console.log(img);
@@ -47,31 +56,36 @@ function removeNavBar (event) {
 		let navLinks = document.getElementsByTagName("a");
 		for (let link of navLinks) {
 		link.classList.remove("linkstyle");
-		}
+		}	
 	}
 }
 
+
 let tracker = 0;
-let storage = [["url(images/desktop-image-hero-1.jpg)", document.querySelector(".slide1")],
-				["url(images/desktop-image-hero-2.jpg)", document.querySelector(".slide2")],
-				["url(images/desktop-image-hero-3.jpg)", document.querySelector(".slide3")]];
+let storage = [["url(images/mobile-image-hero-1.jpg)","url(images/desktop-image-hero-1.jpg)", document.querySelector(".slide1")],
+				["url(images/mobile-image-hero-2.jpg)","url(images/desktop-image-hero-2.jpg)", document.querySelector(".slide2")],
+				["url(images/mobile-image-hero-3.jpg)","url(images/desktop-image-hero-3.jpg)", document.querySelector(".slide3")]];
 
 function forwardArrowPress () {
 	tracker++;
 	if (tracker == 3) tracker = 0;
 	
 	let background = document.querySelector(".item1");
-	background.style.backgroundImage = storage[tracker][0];
+	if (window.outerWidth >= 600 ) {
+		background.style.backgroundImage = storage[tracker][1];
+	}
+	else{
+		background.style.backgroundImage = storage[tracker][0];
+	}
 
 	for (let i = 0; i < storage.length; i++) {
 		if (i != tracker) {
-			storage[i][1].classList.add("invisible")
+			storage[i][2].classList.add("invisible")
 		}
 		else {
-			storage[i][1].classList.remove("invisible")
+			storage[i][2].classList.remove("invisible")
 		}
 	}
-	
 }
 
 function backArrowPress () {
@@ -79,14 +93,19 @@ function backArrowPress () {
 	if (tracker == -1) tracker = 2;
 
 	let background = document.querySelector(".item1");
-	background.style.backgroundImage = storage[tracker][0];
+	if (window.outerWidth < 600 ) {
+		background.style.backgroundImage = storage[tracker][0];
+	}
+	else{
+		background.style.backgroundImage = storage[tracker][1];
+	}
 
 	for (let i = 0; i < storage.length; i++) {
 		if (i != tracker) {
-			storage[i][1].classList.add("invisible")
+			storage[i][2].classList.add("invisible")
 		}
 		else {
-			storage[i][1].classList.remove("invisible")
+			storage[i][2].classList.remove("invisible")
 		}
 	}
 	

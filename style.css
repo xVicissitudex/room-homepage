@@ -40,6 +40,7 @@ h1 {
 	font-weight: 700;
 	font-size: 2rem;
 	line-height: 2rem;
+	margin: 0;
 } 
 
 h3 {
@@ -140,7 +141,7 @@ button:hover {
 }
 
 .item1 {
-	background-image: url(images/desktop-image-hero-1.jpg);
+	background-image: url(images/mobile-image-hero-1.jpg);
 	background-size: cover;
 	background-position: center center;
 	display: flex;
@@ -150,7 +151,7 @@ button:hover {
 }
 
 .item2 >:first-child {
-	padding: 2rem 1.5rem;
+	padding: 1.5vw 1vw;
 	}
 
 
@@ -236,6 +237,7 @@ button:hover {
 	}
 
 	.item1 {
+		background-image: url(images/desktop-image-hero-1.jpg);
 		display: initial;
 		grid-column-start: span 6;
 	}
@@ -245,6 +247,7 @@ button:hover {
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
+		overflow: hidden;
 		grid-column-start: span 4;
 	}
 
