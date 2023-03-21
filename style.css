@@ -161,17 +161,21 @@ button:hover {
 @media screen and (min-width: 800px) {
 
 	li > a {
-		display: block;
+		position: relative;
+		padding-bottom: 0.5rem;
 	}
 
 	li > a::before {
 		content: "";
-		display: ;
 		position:absolute;
-		left: 0;
+		left: 20%;
         bottom: 0;
-        width: 100%;
+        width: 0;
         border-bottom: 2px solid white;
+    }
+
+    li > a:hover::before {
+    	width: 60%;
     }
 
 	h1 {
