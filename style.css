@@ -151,12 +151,12 @@ button:hover {
 }
 
 .item2 >:first-child {
-	padding: min(32px,1.5vw) min(24px,1vw);
+	padding: max(32px,1.5vw) max(24px,1vw);
 	}
 
 
 .item4 {
-	padding: min(32px,1.5vw) min(24px,1vw);
+	padding: max(32px,1.5vw) max(24px,1vw);
 }
 
 @media screen and (min-width: 800px) {
