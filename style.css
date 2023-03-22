@@ -53,7 +53,7 @@ h3 {
 p {
 	color: hsl(0, 0%, 63%);
 	line-height: 1.3rem;
-	font-size: 1rem;
+	font-size: clamp(1rem, 1vw, 1.4rem);
 }
 
 figure {
@@ -262,7 +262,8 @@ button:hover {
 
 	.item4 {
 		grid-column-start: span 4;
-		padding: 2vw;
+		overflow: hidden;
+		padding: max(26px,1.5vw) max(18px,1vw);
 	}
 
 	.item5 {
