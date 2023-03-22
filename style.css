@@ -52,7 +52,7 @@ h3 {
 
 p {
 	color: hsl(0, 0%, 63%);
-	line-height: 1.3rem;
+	line-height: max(1.3rem, 1.5vw);
 	font-size: clamp(1rem, 1.2vw, 1.4rem);
 }
 
